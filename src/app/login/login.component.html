@@ -4,20 +4,22 @@
       <mat-card-title>Login</mat-card-title>
     </mat-card-header>
 
-    <form class="example-form">
+    <form [formGroup]="loginForm" class="example-form">
 
       <mat-card-content>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Email">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error>Invalid Email</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password">
+          <input matInput placeholder="Password" formControlName="Password" type="password">
+          <mat-error>Password should be more then 4 caracters</mat-error>
         </mat-form-field>
 
       </mat-card-content>
       <div  fxLayoutAlign="end end">
-          <button mat-stroked-button color="accent" class="btn-block">Login</button>
+          <button mat-stroked-button color="accent" (click)="login()" class="btn-block" [disabled]="!loginForm.valid">Login</button>
       </div>
 
     </form>

@@ -4,24 +4,27 @@
         <mat-card-title>Register</mat-card-title>
       </mat-card-header>
   
-      <form class="example-form">
+      <form [formGroup]="registerForm" class="example-form">
   
         <mat-card-content>
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Email">
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error>Invalid Email</mat-error>
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Password">
+            <input matInput placeholder="Password" formControlName="password" type="password">
+            <mat-error>Password should be more then 4 caracters</mat-error>
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
-            <input matInput placeholder="Your Password again PLZ">
+            <input matInput placeholder="Your Password again PLZ" formControlName="rePassword" type="password">
+            <mat-error>Password should be more then 4 caracters</mat-error>
           </mat-form-field>
   
           <mat-form-field class="example-full-width">
             <mat-label>Choose a role...</mat-label>
-            <mat-select>
+            <mat-select formControlName="role">
               <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
               </mat-option>
             </mat-select>
@@ -29,7 +32,7 @@
   
         </mat-card-content>
         <div  fxLayoutAlign="end end">
-            <button mat-stroked-button color="accent" class="btn-block">Register</button>
+            <button mat-stroked-button color="accent" class="btn-block" [disabled]="!registerForm.valid" (click)="register()">Register</button>
         </div>
   
       </form>

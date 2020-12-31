@@ -2,9 +2,19 @@
 <mat-toolbar color="primary" class="app-header">
   <div style="display: flex; justify-content: space-between; width: 100%;">
     <div>FORMINI</div>
-    <span class="nav-tool-items">
-      <a mat-button routerLink="login" routerLinkActive="active" style="text-decoration: none; color:white; margin-right: 15px;">Login</a>
-      <a mat-button mat-raised-button routerLink="register" routerLinkActive="active" style="text-decoration: none; color:white;">Register</a>
+    <span class="nav-tool-items" *ngIf="!loginIn">
+      <a mat-button routerLink="login" routerLinkActive="active" >Login</a>
+      <a mat-button mat-raised-button routerLink="register" routerLinkActive="active" >Register</a>
+    </span>
+    <div *ngIf="loginIn">
+      <a style="cursor: pointer;" (click)="goHome()" matTooltip="Home" style="margin-right: 20%;"><mat-icon>home</mat-icon></a>
+      <a style="cursor: pointer;" (click)="goFindFormation()" matTooltip="Formation List" style="margin-right: 20%;"><mat-icon>import_contacts</mat-icon></a>
+      <a style="cursor: pointer;" (click)="goCondida()" matTooltip="Condidats Space" style="margin-right: 20%;"><mat-icon>accessibility_new</mat-icon></a>
+      <a style="cursor: pointer;" (click)="goCoach()" matTooltip="Coach Space" style="margin-right: 20%;"><mat-icon>sports</mat-icon></a>
+    </div>
+    <span class="nav-tool-items" *ngIf="loginIn">
+      <a mat-button routerLinkActive="active" >Welcome</a>
+      <a style="cursor: pointer;" (click)="logout()"><mat-icon>power_settings_new</mat-icon></a>
     </span>
   </div>
 </mat-toolbar>
