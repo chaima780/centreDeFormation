@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,12 +20,22 @@ import {AuthentificationFirebaseService} from './authentification-firebase.servi
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { HomeComponent } from './home/home.component';
+import { TitleComponent } from './Components/title/title.component';
+import { HomeCarouselComponent } from './Components/home-carousel/home-carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatDividerModule} from '@angular/material/divider';
+import { MglTimelineModule } from 'angular-mgl-timeline';
+import {CrystalLightboxModule} from '@crystalui/angular-lightbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    TitleComponent,
+    HomeCarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +51,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatInputModule,
     MatRippleModule,
     MatSelectModule,
+    NgbModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyBTPaLKTNpoyTjk3xHBcJ70IpHx9Ruq4ZA",
       authDomain: "formation-a099f.firebaseapp.com",
@@ -51,7 +62,14 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     }),
     MatSnackBarModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule,
+    MglTimelineModule,
+    CrystalLightboxModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   providers: [AuthentificationFirebaseService],
   bootstrap: [AppComponent]

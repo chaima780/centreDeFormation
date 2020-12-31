@@ -1,1 +1,60 @@
-<p>home works!</p>
+<div class="container">
+    <mat-card class="example-card main-card">
+        <app-home-carousel></app-home-carousel>
+        <div>
+            <p class="description-style">
+                Lina iktib il introduction ili thib aliha ala il centre de formation ta3ik kiama thib inty par exemple 
+                il centre wagtech taaamal w wagteh tojid w chkoun amlo w aleh taaaamal w hajat kima haka
+                hani gaditlik il style mta3o.
+            </p>
+        </div>
+    </mat-card>
+    <div fxLayout="row" class="main-card" style="margin-top: 2%;">
+        <mat-card class="example-card" fxFlex="40">
+            <mat-card-header fxLayoutAlign="center center" >
+               <h3 class="card-title"> Founder</h3>
+            </mat-card-header>
+            <mat-divider ></mat-divider>
+            <div style="margin-top: 2%;">
+                <img src="https://miro.medium.com/max/1200/1*vNu63U4s6gOpQu8XIm6bvA.jpeg" lightbox [simpleMode]="true" style="width: 100%; height: 400px;"/>
+
+                <!-- <img src="https://miro.medium.com/max/1200/1*vNu63U4s6gOpQu8XIm6bvA.jpeg" style="width: 100%; height: 400px;"> -->
+            </div>
+        </mat-card>
+        <mat-card class="example-card scroll-card"  fxFlex="60" style="margin-left: 2%;">
+            <mat-card-header fxLayoutAlign="center center" >
+                <h3 class="card-title"> Learning List</h3>
+            </mat-card-header>
+            <mat-divider ></mat-divider>
+            <div>
+                <mgl-timeline>
+                    <mgl-timeline-entry>
+                        <mgl-timeline-entry-header>NODEJS lvl 2</mgl-timeline-entry-header>
+                        <mgl-timeline-entry-content>Coach: Ahmed wahab</mgl-timeline-entry-content>
+                        <mgl-timeline-entry-side>TODAY At 16PM</mgl-timeline-entry-side>
+                    </mgl-timeline-entry>
+                    <mgl-timeline-entry>
+                        <mgl-timeline-entry-header>Angular 9</mgl-timeline-entry-header>
+                        <mgl-timeline-entry-content>Coach: Mohamed Chihab</mgl-timeline-entry-content>
+                        <mgl-timeline-entry-dot [size]="20" style="color: blue;"></mgl-timeline-entry-dot>
+                        <mgl-timeline-entry-side>Saturday</mgl-timeline-entry-side>
+                    </mgl-timeline-entry>
+                    <mgl-timeline-entry>
+                        <mgl-timeline-entry-header>French</mgl-timeline-entry-header>
+                        <mgl-timeline-entry-content>Coach: Monira al gharbi</mgl-timeline-entry-content>
+                        <mgl-timeline-entry-side>this WeekEnd</mgl-timeline-entry-side>
+                    </mgl-timeline-entry>
+                    <mgl-timeline-entry>
+                        <mgl-timeline-entry-header>Smart Education</mgl-timeline-entry-header>
+                        <mgl-timeline-entry-content>Coach: Morad il sayis</mgl-timeline-entry-content>
+                        <mgl-timeline-entry-side>Today At 5PM</mgl-timeline-entry-side>
+                    </mgl-timeline-entry>
+                </mgl-timeline>
+            </div>
+        </mat-card>
+    </div>
+   
+</div>
+
+
+  

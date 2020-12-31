@@ -7,22 +7,22 @@
       <form [formGroup]="registerForm" class="example-form">
   
         <mat-card-content>
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width-register">
             <input matInput placeholder="Email" formControlName="email">
             <mat-error>Invalid Email</mat-error>
           </mat-form-field>
   
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width-register">
             <input matInput placeholder="Password" formControlName="password" type="password">
             <mat-error>Password should be more then 4 caracters</mat-error>
           </mat-form-field>
   
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width-register">
             <input matInput placeholder="Your Password again PLZ" formControlName="rePassword" type="password">
             <mat-error>Password should be more then 4 caracters</mat-error>
           </mat-form-field>
   
-          <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width-register">
             <mat-label>Choose a role...</mat-label>
             <mat-select formControlName="role">
               <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
