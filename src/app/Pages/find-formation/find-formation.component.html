@@ -1,0 +1,21 @@
+<div>
+<div class="input-container">
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Insert your filter here...</mat-label>
+        <input matInput placeholder="Placeholder" (input)="filterFormations($event.target.value)">
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div>
+
+<div class="main-wrap" [@cardAnimation]="displayedFormations.length" @plusAnimation >
+    <div class="card" *ngFor="let formation of displayedFormations; index as i" (click)="viewDetails(formation.id)">
+      <button class="cross" (click)="deleteCard(i)"> &#10006;</button>
+      <h4 class="info">{{formation.titre}}</h4>
+      <h6 class="sub-info">{{formation.description}}</h6>
+      <h6 class="sub-info" [ngClass]="{'badge-success': formation.lvl === 'débutant', 'badge-warning': formation.lvl === 'intermédiaire', 'badge-danger':formation.lvl === 'avancé' }">{{formation.lvl}}</h6>
+    </div>
+    <div class="card plus-card" (click)="addCard()">
+      <h1 class="plus">&#43;</h1>
+    </div>
+</div>
+</div>

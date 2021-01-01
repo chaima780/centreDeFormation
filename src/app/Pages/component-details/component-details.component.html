@@ -1,0 +1,37 @@
+<div fxLayoutAlign="center center" *ngIf="formation != null" style="height: 100%;">
+<div class="container" >
+    <div  fxFlex="40">
+        <mat-card class="example-card scroll-card"  fxLayoutAlign="start center" fxFlex="60">
+            <mat-icon style="color: gray; font-size: 50px; margin-left: 38%;">get_app</mat-icon>
+        </mat-card>
+    </div>
+    <div  fxFlex="60">
+        <div class="formation-title"> {{formation.titre}}</div>
+        <mat-divider class="small-top-margin"></mat-divider>
+        <div class="formation-charge small-top-margin"> {{formation.charge}} H</div>
+        <div class="small-top-margin">
+            <div class="subtitle formation-subtitle " fxFlex="30"> Description</div>
+            <div class="formation-option" fxFlex="50"> {{formation.description}}</div>
+        </div>
+        <div class="small-top-margin">
+            <div class="subtitle formation-subtitle" fxFlex="30"> Level</div>
+            <div class="formation-option" fxFlex="50"> {{formation.lvl}}</div>
+        </div>
+        <div class="small-top-margin">
+            <div class="subtitle formation-subtitle" fxFlex="30"> More Info</div>
+            <div class="formation-option" fxFlex="50"> lina iktib ay haja thib aliha Statiquement ya chaima just infos zaydin tnajim tbadilha bili thib</div>
+        </div>
+        <div class="subtitle small-top-margin" style="margin-bottom: 2%;">#Tags:</div>
+        <mat-chip-list class="small-top-margin">
+            <mat-chip
+                *ngFor="let tag of tags"
+                color="accent" selected>
+                {{tag}}
+            </mat-chip>
+        </mat-chip-list>
+        <div fxLayoutAlign="center center" style="margin-top: 4%; margin-right: 35%;">
+            <button mat-raised-button color="primary">Subscribe</button>
+        </div>
+    </div>
+</div>
+</div>

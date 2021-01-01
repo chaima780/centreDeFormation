@@ -1,0 +1,69 @@
+.main-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 30px 100px 30px 100px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;   
+}
+.input-container{
+    width: 100%;
+    height: 100%;
+    padding: 100px 100px 0px 100px;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin: 10px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(14, 167, 194);
+    cursor: pointer;
+}
+.info{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+.sub-info{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.plus-card{
+    cursor: pointer;
+    transition: .5s;
+    background: rgb(5, 221, 70);
+    
+    
+}
+.plus-card :hover{
+    transform: scale(1.03);
+}
+.plus{
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+}
+.cross{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size:30px;
+    border: none;
+    background: none;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+    
+}
+.cross :focus{
+    outline: none;
+}
+
+.cross :hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}

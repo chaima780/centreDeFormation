@@ -24,6 +24,10 @@ export class AppComponent implements OnInit{
   }
   goCoach(){}
   goCondida(){}
-  goFindFormation(){}
-  goHome(){}
+  goFindFormation(){
+    this._router.navigate(['/find']);
+  }
+  goHome(){
+    this._router.navigate(['/home']);
+  }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { AuthentificationFirebaseService } from '../authentification-firebase.service';
+import { AuthentificationFirebaseService } from '../../authentification-firebase.service';
 
 @Component({
   selector: 'app-register',

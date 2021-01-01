@@ -1,0 +1,24 @@
+.container{
+    margin: 7% 5%;
+    width: 100%;
+}
+.formation-title{
+    font-size: 22px;
+    font-style: oblique;
+}
+.small-top-margin{
+    margin-top: 2%;
+}
+.formation-charge {
+    padding: 2%;
+background-color: #2196f3;
+width: 103px;
+border-radius: 5px;
+color: white;
+display: flex;
+justify-content: center;
+}
+.subtitle{
+    font-weight: bold;
+    font-size: 15px;
+}
